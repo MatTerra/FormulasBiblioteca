@@ -1,62 +1,32 @@
 package br.com.fevhoy.matlib.geom.figplanas.ret;
 
+import br.com.fevhoy.matlib.geom.figplanas.tria.Triangulo;
 
 /**
  * 
  * 
  * @author Rafael Mascarenhas Dal Moro
- * @review Mateus Berardo de Souza Terra 12/30/2014
+ * @review Mateus Berardo de Souza Terra 18/12/2015
  * @version 1.2 12/30/2014
  */
 public class Retangulo{
-     private static double L;
-     private static double L2;
-     private static double D;
-     private static double P2;     
-     private static double P;
-     private static double A;
     // metodo "result" para area
     public static double getArea(double l, double l2){
-        L= l;
-        L2=l2;
-        setArea();
-        return A;
+        return l*l2;
     }
     // metodo "result" para diagonal
-    public static double getDiag(double l, double l2){
-        L=l;
-        L2=l2;
-        setDiag();//subtituir por metodo de pitagoras
+    public static double getDiagonal(double l, double l2){
+        double D = Triangulo.pitagoras(l,l2);//subtituir por metodo de pitagoras
         return D;
     }
     // metodo "result" para perimetro
-    public static double getPer(double l, double l2){
-        L=l;
-        L2=l2;
-        setPer();
-        return P2;
+    public static double getPerimetro(double l, double l2, boolean semi){
+        if(semi==true){
+            return l+l2;
+        }
+        return 2*(l+l2);
     }
-    //metodo "result" para semiperimetro
-    public static double getSemiPer(double l, double l2){
-        L=l;
-        L2=l2;
-        setSemiPer();
-        return P;
-    }
-    // metodo para area
-    private static void setArea(){
-        A=L*L2;
-    }
-    // metodo para perimetro
-    private static void setPer(){
-        P2 = (2 * L) + (2 * L2);
-    }
-    //metodo para semi perimetro
-    private static void setSemiPer(){
-        P = L+L2;
-    }
-    // metodo para diagonal
-    private static void setDiag(){
-        D = Math.sqrt(Math.pow(L,2) + Math.pow(L2,2));
+    public static double getApotema(double h){
+        return h/2;
     }
 }
