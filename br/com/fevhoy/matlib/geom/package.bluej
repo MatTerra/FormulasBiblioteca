@@ -1,0 +1,23 @@
+#BlueJ package file
+objectbench.height=76
+objectbench.width=1328
+package.editor.height=553
+package.editor.width=1220
+package.editor.x=-100
+package.editor.y=134
+package.numDependencies=0
+package.numTargets=2
+package.showExtends=true
+package.showUses=true
+target1.height=62
+target1.name=figplanas
+target1.type=PackageTarget
+target1.width=80
+target1.x=160
+target1.y=0
+target2.height=62
+target2.name=figespaciais
+target2.type=PackageTarget
+target2.width=90
+target2.x=250
+target2.y=10

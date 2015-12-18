@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=r
+comment0.target=double\ getArea(double)
+comment1.params=r\ dif
+comment1.target=double\ getCirc(double,\ boolean)
+comment2.params=r\ g
+comment2.target=double\ getArc(double,\ int)
+comment3.params=r\ g\ dif
+comment3.target=double\ getAreaArc(double,\ int,\ boolean)
+comment4.params=
+comment4.target=void\ setArea()
+comment5.params=
+comment5.target=void\ setCirc()
+comment6.params=
+comment6.target=void\ setArc()
+comment7.params=
+comment7.target=void\ setAArc()
+numComments=8

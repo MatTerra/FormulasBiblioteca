@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=a1\ n\ r
+comment0.target=int\ getResult(int,\ int,\ int)
+comment1.params=a1\ an\ n\ r\ a
+comment1.target=int\ getResult(int,\ int,\ int,\ int,\ boolean)
+comment2.params=
+comment2.target=void\ setSoma()
+comment3.params=
+comment3.target=void\ setAn()
+numComments=4

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=d\ d2
+comment0.target=double\ getResult(double,\ double)
+comment1.params=d\ d2\ dif
+comment1.target=double\ getResult(double,\ double,\ boolean)
+comment2.params=dif2
+comment2.target=double\ getResult(boolean)
+comment3.params=
+comment3.target=void\ setArea()
+comment4.params=
+comment4.target=void\ setLado()
+comment5.params=
+comment5.target=void\ setPer()
+numComments=6
