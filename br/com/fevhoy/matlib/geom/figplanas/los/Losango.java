@@ -8,42 +8,27 @@ package br.com.fevhoy.matlib.geom.figplanas.los;
  * @version 1.0 1/1/2015
  * review <name> <date>
  */
-public class Losango{
-    private static double D;
-    private static double D2;
-    private static double L;
-    private static double A;
-    private static double P;
-    // metodo "getResult" para area do losango
-    public double getResult( double d, double d2){
-     D=d;
-     D2=d2;
-     setArea();
-     return A;
+public class Losango extends FigPlana{
+    // metodo "getArea" para area do losango
+    public double getArea( double d, double d2){
+		double D=d;
+		double D2=d2;
+		double A= D * D2 / 2;
+		return A;
     }
-    // metodo "getResult" para lado do losango
-    public double getResult(double d, double d2, boolean dif){
-     D=d;
-     D2=d2;
-     setLado();
+    // metodo "getLado" para lado do losango
+    public double getLado(double d, double d2, boolean dif){
+		double D=d;
+		double D2=d2;
+		double L= Math.sqrt( Math.pow(D,2)/2 + Math.pow(D2,2)/2); 
      return L;
     }
-    // metodo"getResult" para perimetro do losango
-    public double getResult(boolean dif2){
-     setPer();
-     return P;
+    // metodo"getPer" para perimetro do losango
+    public double getPer(boolean semi, double l1, double l2){
+     double[] LS = {l1,l1,l2,l2};
+	 getPerimetro(LS,semi);
+	 return getPerimetro();
     }
-    // metodo para calcular area
-    public void setArea(){
-     A= D * D2 / 2;
-    } 
-   //metodo para calcular lado
-    public void setLado(){
-     L= Math.sqrt( Math.pow(D,2)/2 + Math.pow(D2,2)/2);   
-    } 
-    // metodo para calcular perimetro
-    public void setPer(){
-     P = 4 * L;
-    }
+    
 }
     
