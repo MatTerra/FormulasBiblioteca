@@ -12,7 +12,8 @@ public class FigPlana{
         for (double l : ls){
             p+=l;
         }
-        return p;
+        if(semi == false)return p;
+        return p/2;
     }
     public static double getArea(double p, double apot){
         return p*apot;

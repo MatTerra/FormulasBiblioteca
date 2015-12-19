@@ -1,5 +1,6 @@
 package br.com.fevhoy.matlib.geom.figplanas.tria;
 
+import br.com.fevhoy.matlib.geom.figplanas.FigPlana;
 
 /**
  * Esse programa calculara a area e o perimetro de um triangulo comum utilizando diferentes metodos
@@ -9,7 +10,7 @@ package br.com.fevhoy.matlib.geom.figplanas.tria;
  * @review Mateus Berardo de Souza Terra 18/12/2015
  */
 
-public class Triangulo{
+public class Triangulo extends FigPlana{
     // metodo get para area do triangulo via heron
     public static double heron(double l1, double l2, double l3){
        double P = getPerimetro(l1,l2,l3,true);
@@ -36,6 +37,12 @@ public class Triangulo{
     public static double getArea(double b, double h){
        return b*h;
     }
+    public static double getArea(double l, double a, boolean apotema){
+        double[] ls = {l,l,l};
+        if (apotema == false) a = getApotema(a);
+        double p = getPerimetro(ls,true);
+        return a*p;
+    }
     //metodo para area do triangulo equilatero
     public static double getArea(double l){
        return Math.pow(l,2)*Math.sqrt(3)/4;
@@ -54,15 +61,15 @@ public class Triangulo{
     }
     //metodo para calcular perimetro do triangulo equilatero
     public static double getPerimetro(double l, boolean semi){
-        double P = l*3 / 2;
-        if(semi == true) return P;
-        return 2 * P;
+        double[] ls = {l, l, l};
+        double P = getPerimetro(ls, semi);
+        return P;
     }
     // metodo get para perimetro do triangulo
     public static double getPerimetro(double l1,double l2, double l3, boolean semi){
-        double P = l1 + l2 + l3 / 2;
-        if(semi == true) return P;
-        return 2 * P;
+        double[] ls = {l1, l2, l3};
+        double P = getPerimetro(ls, semi);
+        return P;
     }  
   
 }
